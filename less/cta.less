@@ -58,7 +58,11 @@
     }
 
     img {
-        .opacity(.75);
+        .transition(all, 1s, ease-out);
+        &:hover {
+            opacity: 0;
+        }
+        //.opacity(.75);
 
         @media @tablet {
             display: none;

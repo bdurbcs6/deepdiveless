@@ -295,9 +295,14 @@ header .logo {
   -o-transform: skew(70deg, 75deg);
 }
 .cta img {
-  -webkit-opacity: 0.75;
-  -moz-opacity: 0.75;
-  opacity: 0.75;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  -ms-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.cta img:hover {
+  opacity: 0;
 }
 @media (max-width: 768px) {
   .cta img {
