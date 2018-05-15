@@ -1,5 +1,40 @@
 // Mixins below variables
 
+// #lambda-style > .button;
+#lambda-style() {
+  .button {
+    width: 200px;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    border: 1px solid black;
+    background-color: grey;
+    &:hover {
+      background-color: white
+    }
+  }// button
+  
+  .button2 {
+    width: 500px;
+    text-align: center;
+    padding: 20px;
+    display: block;
+    border: 1px solid black;
+    background-color: green;
+    &:hover {
+      background-color: white
+    }
+  }// button
+}
+
+// .create-button(200px, 100px, green);
+.create-button( @width, @height, @background ){
+	width: @width;
+	height: @height;
+	background: @background;
+}
+
+// .border-radius(10px);
 .border-radius (@radius: 5px) {
 	-webkit-border-radius: @radius;
 	-moz-border-radius:    @radius;
@@ -10,18 +45,22 @@
 	background-clip:         padding-box;
 }
 
+// .opacity(0.5);
 .opacity (@opacity: 0.5) {
 	-webkit-opacity: 	@opacity;
 	-moz-opacity: 		@opacity;
 	opacity: 		@opacity;
 }
 
+// Notice we can pass as little or as many arguments as we want!
+// .box-shadow(5px 10px 10px);
 .box-shadow (@string) {
 	-webkit-box-shadow: @string;
 	-moz-box-shadow:    @string;
 	box-shadow:         @string;
 }
 
+// .rotate(45deg);
 .rotate (@deg) {
 	-webkit-transform: rotate(@deg);
 	-moz-transform: 	 rotate(@deg);
@@ -29,6 +68,7 @@
 	-o-transform: 		 rotate(@deg);
 }
 
+// .skew(10deg, 10deg);
 .skew (@deg, @deg2) {
 	-webkit-transform:       skew(@deg, @deg2);
 	-moz-transform: 	 skew(@deg, @deg2);

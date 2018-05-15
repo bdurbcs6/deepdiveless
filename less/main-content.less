@@ -1,29 +1,74 @@
 // Main Content Styles
 
 .main-content {
-   border-top: 2px solid black; 
-   border-bottom: 2px solid black;
-   margin: 75px 0 35px 0;
-   padding: 35px 0;
-   font-size: 16px;
-   line-height: 18px;
-
-   .top-content {
-        display: flex;
-        justify-content: space-around;
+    border-top: 2px solid black; 
+    border-bottom: 2px solid black;
+    margin: 75px 0 35px 0;
+    padding: 35px 0;
+    font-size: 16px;
+    line-height: 18px;
+  
+    @media @tablet {
+      margin: 75px 2% 35px;
     }
-
+  
+    .top-content {
+      display: flex;
+      justify-content: space-around;
+  
+      @media @phone {
+        flex-wrap: wrap;
+        height: 300px;
+      }
+    }
+  
     .middle-img {
-        display: block;
-        margin: 30px auto;
+      display: block;
+      margin: 30px auto;
+      // using mixin
+      .border-radius(20px);
+      // using mixin
+      .rotate(180deg);
+  
+      @media @tablet {
+        width: 100%;
+        margin: 25px auto;
+      }
     }
-
+  
     .bottom-content {
-        display: flex;
-        justify-content: space-around;
-
-        p {
-            padding-right: 20px;
-        }
+      display: flex;
+      justify-content: space-around;
+  
+      @media @phone {
+        flex-wrap: wrap;
+        align-content: space-between;
+        height: 440px;
+      }
+  
+      p {
+        padding-right: 20px;
+      }
     }
-}// main-content
+  
+    .text-content {
+  
+      button {
+        //#lambda-style > .button;
+        .create-button(100px, 45px, teal);
+        .border-radius(10px);
+        margin: 20px 0 0;
+        color: white;
+        cursor: pointer;
+  
+        @media @phone {
+          display: none;
+        }
+  
+        &:hover {
+          background: darken(teal, 20%);
+        }
+      }
+      
+    }
+  }// main-content
