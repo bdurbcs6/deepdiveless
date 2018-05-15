@@ -300,6 +300,7 @@ header .logo {
   -o-transition: all 1s ease-out;
   -ms-transition: all 1s ease-out;
   transition: all 1s ease-out;
+  -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(85%, transparent), to(rgba(255, 255, 255, 0.5)));
 }
 .cta img:hover {
   opacity: 0;
