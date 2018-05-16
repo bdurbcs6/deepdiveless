@@ -258,6 +258,33 @@ header .logo {
   flex-flow: column;
   align-items: center;
   margin: 0 82px 0 0;
+  -webkit-animation: fade-in 2s linear infinite alternate;
+  -moz-animation: fade-in 2s linear infinite alternate;
+  animation: fade-in 2s linear infinite alternate;
+}
+@-moz-keyframes fade-in {
+  0% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: .3;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media (max-width: 768px) {
   .cta .cta-text {
